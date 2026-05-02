@@ -271,7 +271,7 @@ export default function Portfolio() {
             ))}
             <div style={{ width: 1, height: 16, background: "var(--border)", margin: "0 2px" }} />
             <a
-              href="https://www.linkedin.com/in/carolinefenton-9aab4411/"
+              href="https://www.linkedin.com/in/caroline-fenton-9aab4411/"
               target="_blank"
               rel="noopener noreferrer"
               title="LinkedIn"
@@ -587,7 +587,7 @@ export default function Portfolio() {
             }}>
               {[
                 { label: "Email", value: "fenton.caroline@gmail.com", href: "mailto:fenton.caroline@gmail.com" },
-                { label: "LinkedIn", value: "Caroline Fenton", href: "https://www.linkedin.com/in/carolinefenton-9aab4411/" },
+                { label: "LinkedIn", value: "Caroline Fenton", href: "https://www.linkedin.com/in/caroline-fenton-9aab4411/" },
               ].map((c) => (
                 <a
                   key={c.label}
