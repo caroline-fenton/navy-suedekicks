@@ -122,7 +122,7 @@ function ProjectCard({ title, tag, description, link, index }) {
         }}>{title}</h3>
         <span style={{
           fontFamily: "var(--mono)", fontSize: 11,
-          color: "var(--accent)", letterSpacing: "0.05em",
+          color: "var(--muted)", letterSpacing: "0.05em",
           textTransform: "uppercase",
         }}>{tag}</span>
       </div>
@@ -165,7 +165,7 @@ function ExperienceEntry({ role, company, period, bullets, index }) {
           }}>{role}</h3>
           <p style={{
             fontFamily: "var(--body)", fontSize: 14,
-            color: "var(--accent)", marginBottom: 16,
+            color: "var(--muted)", marginBottom: 16,
           }}>{company}</p>
           {bullets.map((b, i) => (
             <p key={i} style={{
@@ -313,7 +313,7 @@ export default function Portfolio() {
           <FadeIn>
             <p style={{
               fontFamily: "var(--mono)", fontSize: 12,
-              color: "var(--accent)", letterSpacing: "0.08em",
+              color: "var(--muted)", letterSpacing: "0.08em",
               textTransform: "uppercase", marginBottom: 20,
             }}>Senior Product Leader, Digital Courseware & EdTech Platforms</p>
           </FadeIn>
@@ -346,7 +346,7 @@ export default function Portfolio() {
               <span>·</span>
               <span>Pearson Education</span>
               <span>·</span>
-              <span style={{ color: "var(--accent)", cursor: "pointer" }}
+              <span style={{ color: "var(--muted)", cursor: "pointer" }}
                 onClick={() => scrollTo("contact")}
               >Get in touch ↓</span>
             </div>
@@ -361,7 +361,7 @@ export default function Portfolio() {
           <FadeIn>
             <p style={{
               fontFamily: "var(--mono)", fontSize: 12,
-              color: "var(--accent)", letterSpacing: "0.08em",
+              color: "var(--muted)", letterSpacing: "0.08em",
               textTransform: "uppercase", marginBottom: 48,
             }}>Experience</p>
           </FadeIn>
@@ -428,7 +428,7 @@ export default function Portfolio() {
           <FadeIn>
             <p style={{
               fontFamily: "var(--mono)", fontSize: 12,
-              color: "var(--accent)", letterSpacing: "0.08em",
+              color: "var(--muted)", letterSpacing: "0.08em",
               textTransform: "uppercase", marginBottom: 12,
             }}>Case Studies</p>
             <p style={{
@@ -456,7 +456,7 @@ export default function Portfolio() {
                     </h3>
                     <span style={{
                       fontFamily: "var(--mono)", fontSize: 11,
-                      color: "var(--accent)", letterSpacing: "0.05em",
+                      color: "var(--muted)", letterSpacing: "0.05em",
                     }}>PERFORMANCE</span>
                   </div>
                   <p style={{
@@ -480,7 +480,7 @@ export default function Portfolio() {
                     </h3>
                     <span style={{
                       fontFamily: "var(--mono)", fontSize: 11,
-                      color: "var(--accent)", letterSpacing: "0.05em",
+                      color: "var(--muted)", letterSpacing: "0.05em",
                     }}>AUTHORING</span>
                   </div>
                   <p style={{
@@ -504,7 +504,7 @@ export default function Portfolio() {
                     </h3>
                     <span style={{
                       fontFamily: "var(--mono)", fontSize: 11,
-                      color: "var(--accent)", letterSpacing: "0.05em",
+                      color: "var(--muted)", letterSpacing: "0.05em",
                     }}>STRATEGY</span>
                   </div>
                   <p style={{
@@ -528,7 +528,7 @@ export default function Portfolio() {
           <FadeIn>
             <p style={{
               fontFamily: "var(--mono)", fontSize: 12,
-              color: "var(--accent)", letterSpacing: "0.08em",
+              color: "var(--muted)", letterSpacing: "0.08em",
               textTransform: "uppercase", marginBottom: 12,
             }}>Projects</p>
             <p style={{
@@ -563,7 +563,7 @@ export default function Portfolio() {
           <FadeIn>
             <p style={{
               fontFamily: "var(--mono)", fontSize: 12,
-              color: "var(--accent)", letterSpacing: "0.08em",
+              color: "var(--muted)", letterSpacing: "0.08em",
               textTransform: "uppercase", marginBottom: 20,
             }}>Contact</p>
           </FadeIn>
@@ -608,7 +608,7 @@ export default function Portfolio() {
                 >
                   <span style={{
                     fontFamily: "var(--mono)", fontSize: 11,
-                    color: "var(--accent)", letterSpacing: "0.06em",
+                    color: "var(--muted)", letterSpacing: "0.06em",
                     textTransform: "uppercase", display: "block",
                     marginBottom: 6,
                   }}>{c.label}</span>
