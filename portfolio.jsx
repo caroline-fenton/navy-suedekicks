@@ -631,7 +631,7 @@ export default function Portfolio() {
           fontFamily: "var(--mono)", fontSize: 11,
           color: "var(--muted)", letterSpacing: "0.03em",
         }}>
-          © 2026 Caroline Fenton — Built with care
+          © 2026 Caroline Fenton
         </p>
       </footer>
     </div>
