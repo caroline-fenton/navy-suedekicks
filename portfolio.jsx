@@ -102,16 +102,23 @@ function FadeIn({ children, delay = 0 }) {
 }
 
 // Project card
-function ProjectCard({ title, tag, description, link, index }) {
+function ProjectCard({ title, tag, description, link, index, noBorder }) {
   const [hovered, setHovered] = useState(false);
+  const Wrapper = link ? "a" : "div";
   return (
     <FadeIn delay={index * 0.1}>
-      <div
+      <Wrapper
+        href={link || undefined}
+        target={link ? "_blank" : undefined}
+        rel={link ? "noopener noreferrer" : undefined}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         style={{
+          display: "block",
+          textDecoration: "none",
+          color: "inherit",
           padding: "28px 0",
-          borderBottom: "1px solid var(--border)",
+          borderBottom: noBorder ? "none" : "1px solid var(--border)",
           cursor: "pointer",
           transition: "padding-left 0.3s ease",
           paddingLeft: hovered ? 12 : 0,
@@ -132,7 +139,7 @@ function ProjectCard({ title, tag, description, link, index }) {
           fontFamily: "var(--body)", fontSize: 14,
           color: "var(--muted)", lineHeight: 1.6, maxWidth: 560,
         }}>{description}</p>
-      </div>
+      </Wrapper>
     </FadeIn>
   );
 }
@@ -542,14 +549,14 @@ export default function Portfolio() {
             title="Encore Atlas"
             tag="Music Discovery"
             description="A full-stack music discovery app built with React, TypeScript, Supabase, and Claude API. Uses a two-layer recommendation system combining tag overlap with bio-derived scene adjacency to surface meaningful musical connections."
-            link="#"
+            link="https://www.encoreatlas.fm"
           />
           <ProjectCard
             index={1}
             title="Brain Blocks"
             tag="Interactive Learning"
             description="A collection of bite-sized learning modules for prototyping interactive learning components — exploring how modular, composable content units can make instructional design more dynamic and engaging."
-            link="#"
+            noBorder
           />
         </section>
 
