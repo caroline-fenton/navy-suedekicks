@@ -102,14 +102,13 @@ function FadeIn({ children, delay = 0 }) {
 }
 
 // Project card
-function ProjectCard({ title, tag, description, link, index, noBorder }) {
+function ProjectCard({ title, tag, description, link, index }) {
   const [hovered, setHovered] = useState(false);
   const style = {
     display: "block",
     textDecoration: "none",
     color: "inherit",
     padding: "28px 0",
-    borderBottom: noBorder ? "none" : "1px solid var(--border)",
     cursor: "pointer",
     transition: "padding-left 0.3s ease",
     paddingLeft: hovered ? 12 : 0,
@@ -152,7 +151,6 @@ function ExperienceEntry({ role, company, period, bullets, index }) {
         gridTemplateColumns: "180px 1fr",
         gap: 32,
         padding: "32px 0",
-        borderBottom: "1px solid var(--border)",
       }}>
         <div>
           <span style={{
@@ -555,7 +553,6 @@ export default function Portfolio() {
             title="Brain Blocks"
             tag="Interactive Learning"
             description="A collection of bite-sized learning modules for prototyping interactive learning components — exploring how modular, composable content units can make instructional design more dynamic and engaging."
-            noBorder
           />
         </section>
 
