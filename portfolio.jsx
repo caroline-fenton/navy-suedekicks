@@ -104,42 +104,41 @@ function FadeIn({ children, delay = 0 }) {
 // Project card
 function ProjectCard({ title, tag, description, link, index, noBorder }) {
   const [hovered, setHovered] = useState(false);
-  const Wrapper = link ? "a" : "div";
+  const style = {
+    display: "block",
+    textDecoration: "none",
+    color: "inherit",
+    padding: "28px 0",
+    borderBottom: noBorder ? "none" : "1px solid var(--border)",
+    cursor: "pointer",
+    transition: "padding-left 0.3s ease",
+    paddingLeft: hovered ? 12 : 0,
+  };
+  const inner = (
+    <>
+      <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 8 }}>
+        <h3 style={{
+          fontFamily: "var(--display)", fontSize: 18,
+          fontWeight: 500, color: "var(--ink)",
+        }}>{title}</h3>
+        <span style={{
+          fontFamily: "var(--mono)", fontSize: 11,
+          color: "var(--accent)", letterSpacing: "0.05em",
+          textTransform: "uppercase",
+        }}>{tag}</span>
+      </div>
+      <p style={{
+        fontFamily: "var(--body)", fontSize: 14,
+        color: "var(--muted)", lineHeight: 1.6, maxWidth: 560,
+      }}>{description}</p>
+    </>
+  );
   return (
     <FadeIn delay={index * 0.1}>
-      <Wrapper
-        href={link || undefined}
-        target={link ? "_blank" : undefined}
-        rel={link ? "noopener noreferrer" : undefined}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        style={{
-          display: "block",
-          textDecoration: "none",
-          color: "inherit",
-          padding: "28px 0",
-          borderBottom: noBorder ? "none" : "1px solid var(--border)",
-          cursor: "pointer",
-          transition: "padding-left 0.3s ease",
-          paddingLeft: hovered ? 12 : 0,
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 8 }}>
-          <h3 style={{
-            fontFamily: "var(--display)", fontSize: 18,
-            fontWeight: 500, color: "var(--ink)",
-          }}>{title}</h3>
-          <span style={{
-            fontFamily: "var(--mono)", fontSize: 11,
-            color: "var(--accent)", letterSpacing: "0.05em",
-            textTransform: "uppercase",
-          }}>{tag}</span>
-        </div>
-        <p style={{
-          fontFamily: "var(--body)", fontSize: 14,
-          color: "var(--muted)", lineHeight: 1.6, maxWidth: 560,
-        }}>{description}</p>
-      </Wrapper>
+      {link
+        ? <a href={link} target="_blank" rel="noopener noreferrer" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} style={style}>{inner}</a>
+        : <div onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} style={style}>{inner}</div>
+      }
     </FadeIn>
   );
 }
