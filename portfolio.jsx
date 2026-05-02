@@ -218,7 +218,7 @@ export default function Portfolio() {
       "--surface": "#F2F1EE",
       "--ink": "#1A1A18",
       "--muted": "#6B6B65",
-      "--accent": "#3D6B5E",
+      "--accent": "#3F7F99",
       "--border": "#E2E0DB",
       "--display": "'Sora', 'Helvetica Neue', sans-serif",
       "--body": "'DM Sans', 'Helvetica Neue', sans-serif",
@@ -231,7 +231,7 @@ export default function Portfolio() {
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        ::selection { background: #3D6B5E33; }
+        ::selection { background: #3F7F9933; }
       `}</style>
 
       {/* Navigation */}
@@ -372,10 +372,10 @@ export default function Portfolio() {
             company="Pearson Education"
             period="2022 — Present"
             bullets={[
-              "Managed $4.5M annual budget including business case creation, roadmap planning, engineering sizing, and initiative prioritization for content authoring platforms — delivering on budget across cost-savings initiatives and revenue-generating student comprehension features",
+              "Managed a multi-million dollar annual budget including business case creation, roadmap planning, engineering sizing, and initiative prioritization for content authoring platforms — delivering on budget across cost-savings initiatives and revenue-generating student comprehension features",
               "Led and mentored 6 product managers, setting product vision and OKRs, managing performance, and developing talent. Stabilized and re-energized a cross-functional team during multiple leadership transitions, realigning 50+ product, engineering, QA, PMO and design partners around shared delivery goals",
               "Drove operational transformation from print-first to digital-first content production. Accelerated delivery by 3–6 months, consistently hitting sales season windows on a $275M portfolio. Drove 30% average cost savings across 250 titles/year serving 2M learners",
-              "Delivered accessibility compliance and offline reading features to expand usability and equity of access, improving student NPS by 14 points",
+              "Delivered accessibility compliance and offline reading features to expand usability and equity of access, improving student NPS by 5 points",
               "Closed a critical workflow gap by designing an in-platform AI suite for content authors, replacing external tool usage with a governed, embedded toolkit — cutting content remediation tasks from days to hours",
             ]}
           />
